@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adopta una mascota</title>
     <link rel="stylesheet" th:href="@{/public/css/adopta.css}">
+    <!-- Estilos globales -->
+    <link rel="stylesheet" th:href="@{/public/css/fragments/header.css}">
+    <link rel="stylesheet" th:href="@{/public/fragments/footer.css}">
 </head>
 <body>
 
@@ -48,8 +51,8 @@
     </section>
 </main>
 
-<!-- Footer -->
-<div th:replace="public/fragments/footer :: piepagina"></div>
+    <!-- Pie de página -->
+    <div th:replace="public/fragments/footer :: pie"></div>
 
 </body>
 </html>

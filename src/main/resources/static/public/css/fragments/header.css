@@ -14,8 +14,13 @@
 
 /* ======== LOGO ======== */
 .logo-img {
-  height: 48px;          /* Ajusta a tu imagen */
+  max-height: 4rem; 
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
+
 
 /* ======== MENÚ ======== */
 .nav-center ul {
@@ -46,7 +51,7 @@
 
 .btn-login {
   background-color: #ffffff;
-  color: #2d6a4f;
+  color: #003b49;
   padding: 8px 16px;
   border-radius: 20px;
   font-weight: 600;
