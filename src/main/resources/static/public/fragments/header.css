@@ -1,0 +1,19 @@
+.header-container {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header-container a {
+    color: white;
+    text-decoration: none;
+}
