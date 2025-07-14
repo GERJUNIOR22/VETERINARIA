@@ -19,6 +19,9 @@
     <!-- MENÚ (centro) -->
     <nav class="nav-center" id="navMenu">
       <ul>
+        <li class="login-item mobile-only">
+          <a th:href="@{/login}" class="btn-login">Iniciar sesión</a>
+        </li>
         <li><a th:href="@{/}">Inicio</a></li>
         <li><a th:href="@{/servicios}">Servicios</a></li>
         <li><a th:href="@{/contacto}">Contacto</a></li>
@@ -30,5 +33,8 @@
     <div class="user-actions">
       <a th:href="@{/login}" class="btn-login">Iniciar sesión</a>
     </div>
+
+      <!-- Script externo -->
+  <script th:src="@{/public/js/fragments/header.js}"></script>
   </header>
 </div>
