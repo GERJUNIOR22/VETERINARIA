@@ -1,20 +1,12 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <link rel="stylesheet" th:href="@{/header/header.css}">
-</head>
-<body>
-    <header>
-        <div class="header-container">
-            <h1>Veterinaria</h1>
-            <nav>
-                <ul>
-                    <li><a th:href="@{/}">Inicio</a></li>
-                    <li><a th:href="@{/mascotas}">Mascotas</a></li>
-                    <li><a th:href="@{/citas}">Citas</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-</body>
-</html>
+<!-- templates/public/fragments/header.html -->
+<div th:fragment="encabezado">
+  <header>
+    <nav>
+      <ul>
+        <li><a th:href="@{/}">Inicio</a></li>
+        <li><a th:href="@{/servicios}">Servicios</a></li>
+        <li><a th:href="@{/contacto}">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+</div>
