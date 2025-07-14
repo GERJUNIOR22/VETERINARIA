@@ -6,9 +6,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
-    // Al visitar "/", se muestra public/index.html
+    // Ruta de inicio
     @GetMapping("/")
     public String mostrarInicio() {
-        return "public/index"; // Thymeleaf buscará templates/public/index.html
+        return "public/index"; // templates/public/index.html
+    }
+
+    // Ruta para la sección Adopta
+    @GetMapping("/adopta")
+    public String mostrarAdopta() {
+        return "public/adopta"; // templates/public/adopta.html
+    }
+
+    // Ruta para servicios (si luego lo haces)
+    @GetMapping("/servicios")
+    public String mostrarServicios() {
+        return "public/servicios"; // templates/public/servicios.html
+    }
+
+    // Ruta para contacto
+    @GetMapping("/contacto")
+    public String mostrarContacto() {
+        return "public/contacto"; // templates/public/contacto.html
     }
 }

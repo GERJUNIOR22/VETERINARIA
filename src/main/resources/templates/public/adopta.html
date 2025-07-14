@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopta una mascota</title>
+    <link rel="stylesheet" th:href="@{/public/css/adopta.css}">
+</head>
+<body>
+
+<!-- Header -->
+<div th:replace="public/fragments/header :: encabezado"></div>
+
+<main>
+    <section class="adopta-hero">
+        <h1>Adopta un nuevo mejor amigo 🐾</h1>
+        <p>¡Dale una segunda oportunidad a una mascota que lo necesita!</p>
+    </section>
+
+    <section class="card-container">
+        <!-- Puedes reemplazar estos datos con datos dinámicos más adelante -->
+        <div class="pet-card">
+            <img src="/public/images/perro1.jpg" alt="Firulais">
+            <h2>Firulais</h2>
+            <p>Edad: 2 años</p>
+            <p>Raza: Mestizo</p>
+            <p>Juguetón, sociable y busca una familia amorosa.</p>
+            <a href="#" class="btn-adoptar">Adoptar</a>
+        </div>
+
+        <div class="pet-card">
+            <img src="/public/images/gato1.jpg" alt="Michi">
+            <h2>Michi</h2>
+            <p>Edad: 1 año</p>
+            <p>Raza: Criollo</p>
+            <p>Tranquilo, cariñoso, ideal para departamentos.</p>
+            <a href="#" class="btn-adoptar">Adoptar</a>
+        </div>
+
+        <div class="pet-card">
+            <img src="/public/images/perro2.jpg" alt="Luna">
+            <h2>Luna</h2>
+            <p>Edad: 3 años</p>
+            <p>Raza: Labrador</p>
+            <p>Muy obediente, perfecta para niños.</p>
+            <a href="#" class="btn-adoptar">Adoptar</a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<div th:replace="public/fragments/footer :: piepagina"></div>
+
+</body>
+</html>

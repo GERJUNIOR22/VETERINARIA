@@ -1,12 +1,39 @@
 <!-- templates/public/fragments/header.html -->
 <div th:fragment="encabezado">
-  <header>
-    <nav>
+  <header class="header-container">
+
+    <!-- LOGO (izquierda) -->
+    <div class="logo">
+      <a th:href="@{/}">
+        <!-- Si tienes un PNG ponlo en /static/images/logo.png -->
+        <img src="/images/logo.png" alt="PetMach" class="logo-img" />
+      </a>
+    </div>
+
+    <!-- BOTÓN HAMBURGUESA (solo móvil) -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <!-- MENÚ (centro) -->
+    <nav class="nav-center" id="navMenu">
       <ul>
         <li><a th:href="@{/}">Inicio</a></li>
         <li><a th:href="@{/servicios}">Servicios</a></li>
         <li><a th:href="@{/contacto}">Contacto</a></li>
+        <li><a th:href="@{/adopta}">Adopta 💛</a></li>
       </ul>
     </nav>
+
+    <!-- ACCIONES (derecha) -->
+    <div class="user-actions">
+      <a th:href="@{/login}" class="btn-login">Iniciar sesión</a>
+    </div>
   </header>
+
+  <!-- JavaScript minimal para el menú hamburguesa -->
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('active');
+    }
+  </script>
 </div>

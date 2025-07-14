@@ -7,6 +7,7 @@
 
     <!-- Estilos globales -->
     <link rel="stylesheet" th:href="@{/public/fragments/header.css}">
+    <link rel="stylesheet" th:href="@{/public/fragments/footer.css}">
 </head>
 <body>
 
@@ -39,8 +40,8 @@
         </section>
     </main>
 
-    <!-- Pie de página (a futuro) -->
-
+    <!-- Pie de página -->
+    <div th:replace="public/fragments/footer :: pie"></div>
 
 </body>
 </html>
