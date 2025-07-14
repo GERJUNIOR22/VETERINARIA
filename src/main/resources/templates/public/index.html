@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Veterinaria</title>
+
+    <!-- Estilos globales -->
+    <link rel="stylesheet" th:href="@{/public/fragments/header.css}">
+</head>
+<body>
+
+    <!-- Encabezado público -->
+    <div th:replace="public/fragments/header :: encabezado"></div>
+
+    <!-- Contenido principal -->
+    <main>
+        <section style="text-align: center; padding: 40px;">
+            <h1>Bienvenido a la Veterinaria</h1>
+            <p>Ofrecemos atención especializada para tus mascotas.</p>
+            <a th:href="@{/citas}" style="padding: 10px 20px; background-color: #2d6a4f; color: white; border-radius: 5px; text-decoration: none;">
+                Reservar una cita
+            </a>
+        </section>
+
+        <section style="display: flex; justify-content: space-around; padding: 20px;">
+            <div>
+                <h2>Consultas Médicas</h2>
+                <p>Evaluamos la salud de tu mascota con atención profesional.</p>
+            </div>
+            <div>
+                <h2>Vacunación</h2>
+                <p>Mantén al día las vacunas de tus mascotas.</p>
+            </div>
+            <div>
+                <h2>Urgencias</h2>
+                <p>Atención inmediata para emergencias veterinarias.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página (a futuro) -->
+
+
+</body>
+</html>
