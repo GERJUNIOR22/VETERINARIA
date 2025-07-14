@@ -1,4 +1,4 @@
-package com.veterinaria.spring.veterinaria;
+package com.veterinaria.spring.veterinaria.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
