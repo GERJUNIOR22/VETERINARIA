@@ -14,7 +14,8 @@ public class SecurityConfig {
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
                     "/",                // Página principal
-                    "/login",           // Login
+                    "/login",      // Login
+                    "/adopta",      //Adopta perro
                     "/registro",        // Registro
                     "/public/**",       // Archivos CSS, js y img
                     "/admin/**"         // Archivos CSS, js y img
