@@ -18,7 +18,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .userDetailsService(userDetailsService) // REGISTRO DEL SERVICIO
+            .userDetailsService(userDetailsService)
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
                     "/",                // Página principal
@@ -28,12 +28,12 @@ public class SecurityConfig {
                     "/public/**",      // Archivos estáticos
                     "/admin/**"
                 ).permitAll()
-                .anyRequest().authenticated() // Todo lo demás requiere login
+                .anyRequest().authenticated()
             )
             .formLogin(login -> login
                 .loginPage("/login")               // Página personalizada
                 .loginProcessingUrl("/login")      // POST que procesa Spring
-                .defaultSuccessUrl("/dashboard", true) // Página post-login
+                .defaultSuccessUrl("/", true)      // ✅ Redirigir a página principal
                 .failureUrl("/login?error=true")   // Si falla login
                 .permitAll()
             )
@@ -46,9 +46,8 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // PERMITIR TEXTO PLANO - SOLO PARA DESARROLLO
     @Bean
     public PasswordEncoder passwordEncoder() {
-        return NoOpPasswordEncoder.getInstance();
+        return NoOpPasswordEncoder.getInstance(); // Solo para desarrollo
     }
 }
