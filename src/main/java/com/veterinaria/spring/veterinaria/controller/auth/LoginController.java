@@ -21,17 +21,19 @@ public class LoginController {
         return "public/login";
     }
 
-    @GetMapping("/registro")
-    public String mostrarRegistro() {
-        return "public/registro";
+    // ✅ Cambiado para evitar conflicto con RegistroController
+    @GetMapping("/registro-desde-login")
+    public String mostrarRegistroDesdeLogin() {
+        return "public/registro"; // o "registro" si es tu nombre de vista
     }
 
-    @PostMapping("/registro")
-    public String procesarRegistro(@RequestParam String nombreCompleto,
-                                   @RequestParam String username,
-                                   @RequestParam String password,
-                                   @RequestParam String rol,
-                                   Model model) {
+    // ✅ También cambiamos la ruta POST para evitar duplicado con RegistroController
+    @PostMapping("/registro-desde-login")
+    public String procesarRegistroDesdeLogin(@RequestParam String nombreCompleto,
+                                             @RequestParam String username,
+                                             @RequestParam String password,
+                                             @RequestParam String rol,
+                                             Model model) {
         if (usuarioRepository.findByUsername(username) != null) {
             model.addAttribute("error", "El nombre de usuario ya existe");
             return "public/registro";
