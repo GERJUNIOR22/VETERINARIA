@@ -11,24 +11,29 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # 👈 acceso a Docker del host
     #command: sleep infinity
     ports:
-      - "8080:8080"
+      - "${SERVER_PORT}:8080"
     depends_on:
       - mysql
+    env_file:
+      - .env
     networks:
       - default
-
   mysql:
     image: mysql:8.0
     container_name: mysql-veterinaria
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: veterinaria
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: ${DB_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS} 
     ports:
-      - "3306:3306"
+      - "${DB_PORT}:3306"
     volumes:
       - ./init-db:/docker-entrypoint-initdb.d
+    env_file:
+      - .env
     networks:
       - default
+
+
