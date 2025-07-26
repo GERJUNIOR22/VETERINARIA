@@ -10,9 +10,9 @@
     "source=${localWorkspaceFolder},target=/workspace,type=bind",
     "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
   ],
-  "features": {
+  /*  "features": {
     "docker-in-docker": "latest"
-  },
+  },*/
   "customizations": {
     "vscode": {
       "extensions": [
