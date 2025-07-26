@@ -21,6 +21,7 @@ public class SecurityConfig {
             .userDetailsService(userDetailsService)
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(
+                    "/olvide-password",  // Ruta pública para recuperar contraseña
                     "/",                // Página principal
                     "/login",          // Login
                     "/adopta",         // Página de adopción
