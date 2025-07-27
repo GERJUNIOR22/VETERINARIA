@@ -34,5 +34,11 @@ build/
 .vscode/
 # Archivos de entorno local
 .env
-# Archivos de entorno local
+# Carpeta target ya que cambia
 /target/
+# Ignora toda la carpeta logs y su contenido.
+logs/
+# Ignora cualquier archivo .log que esté en la raíz del proyecto.
+*.log
+# Ignora todos los archivos .log en cualquier subdirectorio del proyecto (por si se generan en otras carpetas también).
+**/*.log
