@@ -34,3 +34,5 @@ build/
 .vscode/
 # Archivos de entorno local
 .env
+# Archivos de entorno local
+/target/
